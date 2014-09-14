@@ -35,5 +35,93 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RottenTomatoes/PosterViewController.swift"
+            timestampString = "432426832.414426"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "PosterViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RottenTomatoes.PosterViewController.posterBigImage.getter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIImageView&gt;"
+                  moduleName = "RottenTomatoes"
+                  urlString = "file:///Users/vidyasridharan/Documents/RottenTomatoes/RottenTomatoes/PosterViewController.swift"
+                  timestampString = "432426832.452757"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RottenTomatoes.PosterViewController.posterBigImage.setter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIImageView&gt;"
+                  moduleName = "RottenTomatoes"
+                  urlString = "file:///Users/vidyasridharan/Documents/RottenTomatoes/RottenTomatoes/PosterViewController.swift"
+                  timestampString = "432426832.454263"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RottenTomatoes.PosterViewController.init (RottenTomatoes.PosterViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; RottenTomatoes.PosterViewController"
+                  moduleName = "RottenTomatoes"
+                  urlString = "file:///Users/vidyasridharan/Documents/RottenTomatoes/RottenTomatoes/PosterViewController.swift"
+                  timestampString = "432426832.454516"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "123">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RottenTomatoes.PosterViewController.init (RottenTomatoes.PosterViewController.Type)() -&gt; RottenTomatoes.PosterViewController"
+                  moduleName = "RottenTomatoes"
+                  urlString = "file:///Users/vidyasridharan/Documents/RottenTomatoes/RottenTomatoes/PosterViewController.swift"
+                  timestampString = "432426832.454653"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RottenTomatoes.PosterViewController.init (RottenTomatoes.PosterViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; RottenTomatoes.PosterViewController"
+                  moduleName = "RottenTomatoes"
+                  urlString = "file:///Users/vidyasridharan/Documents/RottenTomatoes/RottenTomatoes/PosterViewController.swift"
+                  timestampString = "432426832.455038"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
