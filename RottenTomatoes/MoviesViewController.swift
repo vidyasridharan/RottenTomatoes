@@ -11,29 +11,40 @@ import UIKit
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var movies: [NSDictionary] = []
     
+    @IBOutlet weak var searchTabBar: UISearchBar!
+   
+    
+    @IBOutlet weak var announcementView: UIView!
+    @IBOutlet weak var networkError: UILabel!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        
+        self.networkError.hidden = true
+        self.searchTabBar.hidden = false
         var hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        
         hud.labelText = "loading .."
-        
         hud.show(true)
         
         var url = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=20&country=us"
         var request = NSURLRequest(URL: NSURL(string: url))
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data: NSData!, error:NSError!) -> Void in
-            var object = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
-            println("object: \(object)")
-            self.movies = object["movies"] as [NSDictionary]
             
-            
-            self.tableView.reloadData()
+            if(error != nil){
+                self.networkError.hidden = false
+                self.searchTabBar.hidden  = true
+            }
+            else{
+                self.networkError.hidden = true
+                self.searchTabBar.hidden = false
+                var object = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
+                println("object: \(object)")
+                self.movies = object["movies"] as [NSDictionary]
+                self.tableView.reloadData()
+            }
             MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             
         }
