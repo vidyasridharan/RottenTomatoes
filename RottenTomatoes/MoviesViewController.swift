@@ -27,8 +27,12 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         var hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.labelText = "loading .."
         hud.show(true)
-        
-        var url = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=20&country=us"
+        var url = ""
+        if(self.navigationItem.title == "Movies"){
+         url = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=20&country=us"}
+        else{
+        url = "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=20&country=us"
+        }
         var request = NSURLRequest(URL: NSURL(string: url))
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data: NSData!, error:NSError!) -> Void in
