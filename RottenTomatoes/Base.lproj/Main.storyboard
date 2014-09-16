@@ -48,22 +48,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yzh-oU-r9I" id="W6M-oc-GPf">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dFE-ju-zKb">
-                                                    <rect key="frame" x="116" y="25" width="211" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dFE-ju-zKb">
+                                                    <rect key="frame" x="97" y="27" width="230" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="Label">
-                                                            <attributes>
-                                                                <color key="NSColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="15" name="HelveticaNeue"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Om9-ZH-9Fn">
-                                                    <rect key="frame" x="116" y="54" width="163" height="55"/>
+                                                    <rect key="frame" x="97" y="54" width="182" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Label">
@@ -213,7 +206,7 @@
             </objects>
             <point key="canvasLocation" x="1207" y="46"/>
         </scene>
-        <!--Poster View Controller-->
+        <!--Title-->
         <scene sceneID="ybr-6B-j2M">
             <objects>
                 <viewController id="nH6-2B-gRM" customClass="PosterViewController" customModule="RottenTomatoes" customModuleProvider="target" sceneMemberID="viewController">
@@ -248,9 +241,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hS8-Am-KfO"/>
+                    <navigationItem key="navigationItem" title="Title" id="J4E-7Z-OJE"/>
                     <connections>
                         <outlet property="contentView" destination="HoK-bn-RJ2" id="DA0-Pi-Jyz"/>
+                        <outlet property="movieTitle" destination="J4E-7Z-OJE" id="DQE-da-4rJ"/>
                         <outlet property="posterBigImage" destination="Mkz-nx-VNa" id="FVf-Z8-xkP"/>
                         <outlet property="scrollView" destination="fio-fC-ib9" id="OW2-R0-hWX"/>
                         <outlet property="synopsisLabel" destination="czo-qC-nHd" id="og0-Vg-Tv9"/>

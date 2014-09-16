@@ -10,7 +10,7 @@ import UIKit
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var movies: [NSDictionary] = []
-    
+    var isSearch = true
     @IBOutlet weak var searchTabBar: UISearchBar!
    
     
@@ -92,14 +92,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let indexPath = tableView.indexPathForSelectedRow()
         var movie = movies[indexPath!.row]
         var posters = movie["posters"] as NSDictionary
-         var textdesc = movie["synopsis"] as? String
-        var posterUrl = posters["thumbnail"] as String
-       
+        var textdesc = movie["synopsis"] as? String
+        var posterUrl = posters["original"] as String
+        var movieName = movie["title"] as? String
         if(segue.identifier == "movieSegue"){
             
             let vc = segue.destinationViewController as PosterViewController
             vc.posterUrl  = posterUrl
             vc.descriptionText = textdesc!
+            vc.movieName = movieName!
             
             
         }

@@ -18,17 +18,19 @@ class PosterViewController: UIViewController {
     
     @IBOutlet var scrollView: UIScrollView!
     
+    @IBOutlet weak var movieTitle: UINavigationItem!
     
     @IBOutlet weak var contentView: UIView!
     var posterUrl = ""
-    
+    var movieName = ""
     
     var descriptionText = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        movieTitle.title = movieName
         posterBigImage.setImageWithURL(NSURL(string: posterUrl ))
+        // Utils.loadImageUrl()
         synopsisLabel.text = descriptionText
         synopsisLabel.sizeToFit()
      
