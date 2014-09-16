@@ -14,8 +14,11 @@ An app using Rotten Tomatoes data in Swift
   Add a tab bar for Box Office and DVD (optional).
 </li>
 </ul>
-+![Video Walkthrough](RottenTom.gif)
+
+![Video Walkthrough](RottenTom.gif)
 <br>
-+![Video Walkthrough](bloggif_5417b47dd600e.gif)
+<br>
+
+![Video Walkthrough](bloggif_5417b47dd600e.gif)
 
 
