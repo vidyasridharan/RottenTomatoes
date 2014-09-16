@@ -15,3 +15,5 @@ An app using Rotten Tomatoes data in Swift
 </li>
 </ul>
 +![Video Walkthrough](bloggif_5417b47dd600e.gif)
++![Video Walkthrough](RottenTom.gif)
+
