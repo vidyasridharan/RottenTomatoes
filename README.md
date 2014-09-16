@@ -2,6 +2,7 @@ RottenTomatoes
 ==============
 
 An app using Rotten Tomatoes data in Swift
+Time Taken : 18 hours
 <ul>
 <li>
   User can view a list of movies from Rotten Tomatoes. Poster images must be loading asynchronously.
