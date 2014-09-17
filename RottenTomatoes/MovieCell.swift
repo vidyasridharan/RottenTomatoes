@@ -16,11 +16,17 @@ class MovieCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.posterView.alpha=1
+    }
+    
+    func setThumbnail (posterUrl: String) -> Void{
+        self.posterView.setImageWithURL(NSURL(string: posterUrl))
+        UIView.transitionWithView(posterView, duration: 0.9, options:UIViewAnimationOptions.CurveEaseOut , animations:{self.posterView.alpha = 1}, completion: nil)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
 

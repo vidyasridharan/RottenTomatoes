@@ -9,6 +9,7 @@
 import UIKit
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var refreshControl: UIRefreshControl!
     var movies: [NSDictionary] = []
     var isSearch = true
     @IBOutlet weak var searchTabBar: UISearchBar!
@@ -52,7 +53,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             
         }
-        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
           // Do any additional setup after loading the view.
     }
 
@@ -74,8 +77,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         var posters = movie["posters"] as NSDictionary
         var posterUrl = posters["thumbnail"] as String
+        cell.posterView.alpha=0
+        cell.setThumbnail(posterUrl)
         
-        cell.posterView.setImageWithURL(NSURL(string: posterUrl))
         
         
         println("Hello, I'm at row: \(indexPath.row), section: \(indexPath.section), and: \(cell.titleLabel.text)")
@@ -105,6 +109,19 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             
         }
     }
-   
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
+    func onRefresh() {
+        delay(2, closure: {
+            self.refreshControl.endRefreshing()
+        })
+    }
 
 }
