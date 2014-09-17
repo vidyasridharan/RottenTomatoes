@@ -15,6 +15,7 @@ Time Taken : 18 hours
 </li>
 <li>Customize the highlight and selection effect of the cell. (optional)</li>
 <li>Customize the navigation bar(optional )</li>
+<li>Images fade in(optional )</li>
 </ul>
 
 ![Video Walkthrough](RottenTom.gif)
